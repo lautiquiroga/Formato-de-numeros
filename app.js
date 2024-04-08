@@ -2,7 +2,6 @@
 
 function formatoNumero() {
     let input = document.getElementById('numeroInput');
-    let cursorPos = input.selectionStart; // Obtener la posición del cursor antes de modificar el valor
     let numero = input.value.replace(/[^0-9,.]/g, ''); // Eliminar cualquier carácter que no sea número, ".", o ","
 
     // Eliminar puntos para el formateo, manteniendo la coma si existe
@@ -27,11 +26,6 @@ function formatoNumero() {
 
     // Asignar el valor formateado al input
     input.value = numeroFormateado + decimal;
-
-    // Ajustar la posición del cursor si es necesario
-    if (cursorPos !== input.value.length + 1) {
-        input.setSelectionRange(input.value.length + 1, input.value.length + 1);
-    }
 }
 
 
