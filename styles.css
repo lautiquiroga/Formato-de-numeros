@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  font-size: 20px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.369);
+  color: white;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
