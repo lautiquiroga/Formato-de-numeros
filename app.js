@@ -4,6 +4,12 @@ function formatoNumero() {
     let input = document.getElementById('numeroInput');
     let numero = input.value.replace(/[^0-9,.]/g, ''); // Eliminar cualquier carácter que no sea número, ".", o ","
 
+    // Verificar si el número es cero y no tiene decimales
+    if (numero === '0' || numero === ',') {
+        input.value = '';
+        return;
+    }
+
     // Eliminar puntos para el formateo, manteniendo la coma si existe
     numero = numero.replace(/\./g, '');
 
@@ -27,6 +33,7 @@ function formatoNumero() {
     // Asignar el valor formateado al input
     input.value = numeroFormateado + decimal;
 }
+
 
 
 //// Cursor dentro del input siempre al final ////
